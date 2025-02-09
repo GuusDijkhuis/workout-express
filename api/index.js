@@ -2,11 +2,11 @@ import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import {logger} from './src/app/middleware/logger.js'
-import { errorHandler } from './src/app/middleware/error.js'
-import { notFound } from './src/app/middleware/notFound.js'
-import exerciseRoutes from './src/app/routes/exercise.route.js'
-import {connectDB} from './src/config/db.js'
+import {logger} from './app/middleware/logger.js'
+import { errorHandler } from './app/middleware/error.js'
+import { notFound } from './app/middleware/notFound.js'
+import exerciseRoutes from './app/routes/exercise.route.js'
+import {connectDB} from './config/db.js'
 
 dotenv.config()
 
