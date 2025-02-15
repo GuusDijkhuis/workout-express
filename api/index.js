@@ -29,7 +29,8 @@ app.use('/api/exercises', exerciseRoutes)
 app.use(notFound)
 app.use(errorHandler)
 
-app.listen(port, () => {
-    connectDB()
-    console.log(`Server is running on port ${port}`)
-})
+connectDB().then(() => 
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`)
+    })
+)
